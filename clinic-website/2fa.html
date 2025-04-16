@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Verification Code</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #333;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .resend-button {
+            background-color: #007bff;
+            margin-top: 10px;
+        }
+        .resend-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Enter 6-Digit Code</h2>
+        <p>A verification code has been sent to your email. Please enter it below:</p>
+        <form action="php/verify_code.php" method="POST">
+            <input type="text" name="verification_code" placeholder="Enter 6-digit code" required maxlength="6" pattern="\d{6}">
+            <button type="submit">Verify Code</button>
+        </form>
+        <form action="php/send_verification_code.php" method="POST">
+            <button type="submit">Resend Code</button>
+        </form>
+    </div>
+</body>
+</html>

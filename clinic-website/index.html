@@ -1,0 +1,64 @@
+<?php
+session_start();
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clinic Name</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Dr Basem Clinic</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About us.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="php/personal_information.php">Personal Information</a></li>
+            </ul>
+        </nav>
+		<?php
+                // Show the Admin Dashboard link only if the user is an admin
+                if (isset($_SESSION['is_admin']) && $_SESSION['is_admin'] === true) {
+                    echo <li><a href="Admin.html">Admin Dashboard</a></li>
+                
+    </header>
+    
+    <section class="main">
+        <div class="main-text">
+            <h2>Welcome to Our Clinic</h2>
+            <p>Your health is our priority. We provide the best care for you and your family.</p>
+            <a href="appointment.html" class="cta-button">Book an Appointment</a>
+            <a href="order_medicine.html" class="cta-button">Order Medicine</a>
+        </div>
+    </section>
+
+    <section class="services">
+        <h2>Our Services</h2>
+        <div class="service-item">
+            <h3>General Consultation</h3>
+            <p>Comprehensive health check-ups for all age groups.</p>
+        </div>
+        <div class="service-item">
+            <h3>Pediatrics</h3>
+            <p>Specialized care for your little ones.</p>
+        </div>
+        <div class="service-item">
+            <h3>Dental Care</h3>
+            <p>High-quality dental services for a bright smile.</p>
+        </div>
+    </section>
+    <footer>
+        <p>© 2024 Clinic Name. All Rights Reserved.</p>
+        <p><a href="policies.html">Privacy Policy</a> | <a href="Terms of Service.html">Terms of Service</a></p>
+	<p>Already have an account? <a href="login.html">Login Here</a></p>
+    </footer>
+</body>
+</html>

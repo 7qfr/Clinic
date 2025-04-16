@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Add Users and Admins</title>
+    <link rel="stylesheet" href="css/Admin Styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Admin Dashboard</h1>
+        </div>
+    </header>
+
+    <section class="admin-section">
+        <h2>Add a New User Account</h2>
+        <form action="php/add_user.php" method="POST">
+            <div class="form-group">
+                <label for="user_first_name">First Name:</label>
+                <input type="text" id="user_first_name" name="user_first_name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="user_last_name">Last Name:</label>
+                <input type="text" id="user_last_name" name="user_last_name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="user_email">Email Address:</label>
+                <input type="email" id="user_email" name="user_email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="user_password">Password:</label>
+                <input type="password" id="user_password" name="user_password" required>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="submit-button">Add User</button>
+            </div>
+        </form>
+
+        <hr>
+
+        <h2>Add a New Admin Account</h2>
+        <form action="php/add_admin.php" method="POST">
+            <div class="form-group">
+                <label for="admin_first_name">First Name:</label>
+                <input type="text" id="admin_first_name" name="admin_first_name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="admin_last_name">Last Name:</label>
+                <input type="text" id="admin_last_name" name="admin_last_name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="admin_email">Email Address:</label>
+                <input type="email" id="admin_email" name="admin_email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="admin_password">Password:</label>
+                <input type="password" id="admin_password" name="admin_password" required>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="submit-button">Add Admin</button>
+            </div>
+        </form>
+    </section>
+<header>
+        <h2>Admin Dashboard</h2>
+</header>
+    
+    <section>
+        <h3>Manage Accounts</h3>
+        <!-- View Accounts Button -->
+        <form action="php/view_accounts.php" method="GET">
+            <button type="submit">View All Accounts</button>
+        </form>
+    </section>
+    <footer>
+        <p>© 2024 Clinic Name. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

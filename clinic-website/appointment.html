@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book an Appointment</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header> 
+        <div class="logo">
+            <h1>Clinic Name</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">About Us.html</a></li>
+                <li><a href="appointment.html">Book Appointment</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="appointment-form">
+        <h2>Book an Appointment</h2>
+        <form action="php/appointments.php" method="POST">
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="full_name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="date">Preferred Date:</label>
+                <input type="date" id="date" name="preferred_date" required>
+            </div>
+
+            <div class="form-group">
+                <label for="time">Preferred Time:</label>
+                <input type="time" id="time" name="preferred_time" required>
+            </div>
+
+            <div class="form-group">
+                <label for="doctor">Select Doctor:</label>
+                <select id="doctor" name="doctor" required>
+                    <option value="">--Select a Doctor--</option>
+                    <option value="Dr. Basem">Dr. Basem Ali</option>
+                    <option value="Dr. Khalid">Dr. Khalid Marhoon</option>
+                    <option value="Dr. Mohammed">Dr. Mohammed Al Shiekh</option>
+                    <option value="Dr. Fatima">Dr. Fatima Al Hadad</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="purpose">Purpose of Visit:</label>
+                <select id="purpose" name="purpose_of_visit" required>
+                    <option value="">--Select a Purpose--</option>
+                    <option value="General Consultation">General Consultation</option>
+                    <option value="Dental Checkup">Dental Checkup</option>
+                    <option value="Pediatric Consultation">Pediatric Consultation</option>
+                    <option value="Specialist Referral">Specialist Referral</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="submit-button">Book Appointment</button>
+            </div>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2024 Clinic Name. All Rights Reserved.</p>
+        <p><a href="policies yap.html">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </footer>
+</body>
+</html>
